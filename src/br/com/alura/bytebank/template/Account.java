@@ -4,7 +4,7 @@ reutilizar e sobrescrever comportamentos que se tem em comum, através da utiliz
 isso é possível por conta do paradigma poo
  */
 
-import br.com.alura.bytebank.excepetion.InsufficientBalanceException;
+import br.com.alura.bytebank.exception.InsufficientBalanceException;
 
 public abstract class Account {
     private Client holder;

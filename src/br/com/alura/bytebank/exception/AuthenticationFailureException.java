@@ -1,4 +1,4 @@
-package br.com.alura.bytebank.excepetion;
+package br.com.alura.bytebank.exception;
 
 import br.com.alura.bytebank.enums.ExceptionsEnum;
 

@@ -1,6 +1,6 @@
 package br.com.alura.bytebank.test;
 
-import br.com.alura.bytebank.excepetion.InsufficientBalanceException;
+import br.com.alura.bytebank.exception.InsufficientBalanceException;
 import br.com.alura.bytebank.template.Address;
 import br.com.alura.bytebank.template.Client;
 import br.com.alura.bytebank.template.CurrentAccount;
