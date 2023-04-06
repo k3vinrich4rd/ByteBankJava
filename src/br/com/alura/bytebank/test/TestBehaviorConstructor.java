@@ -1,12 +1,12 @@
 package br.com.alura.bytebank.test;
 
-import br.com.alura.bytebank.template.AccountCurrent;
+import br.com.alura.bytebank.template.CurrentAccount;
 
 public class TestBehaviorConstructor {
     public static void main(String[] args) {
 
-        AccountCurrent accountCurrent = new AccountCurrent();
-        accountCurrent.setNumber(-1);
-        accountCurrent.setAgency(-1);
+        CurrentAccount currentAccount = new CurrentAccount();
+        currentAccount.setNumber(-1);
+        currentAccount.setAgency(-1);
     }
 }

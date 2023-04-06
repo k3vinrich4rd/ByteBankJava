@@ -4,6 +4,8 @@ reutilizar e sobrescrever comportamentos que se tem em comum, através da utiliz
 isso é possível por conta do paradigma poo
  */
 
+import br.com.alura.bytebank.excepetion.InsufficientBalanceException;
+
 public abstract class Account {
     private Client holder;
     protected double balance;
@@ -75,10 +77,11 @@ public abstract class Account {
     mas só é possível o usuário fazer isso se a conta do mesmo usuário seguir as condições
     pre estabelecidas pela lógica do método
      */
-    public void toWithdraw(double value) {
+    public void toWithdraw(double value) throws InsufficientBalanceException {
         if (this.balance <= 0 || this.balance < value) {
-            System.out.println("Unable to perform a withdrawal action, insufficient balance");
-            return;
+            System.out.println("Balance in account: " + this.balance + " value to withdraw: " + value);
+            throw new InsufficientBalanceException();
+
         }
         System.out.println("Withdrawal action performed successfully");
     }
@@ -89,15 +92,14 @@ public abstract class Account {
     para outra conta, mas só é possível o usuário fazer isso, se a conta do mesmo usuário seguir
      as condições pre estabelecidas pela lógica do método
     */
-    public boolean transfer(double value, Account account) {
+    public void transfer(double value, Account account) throws InsufficientBalanceException {
         if (this.balance <= 0 || this.balance < value) {
             System.out.println("Impossible to perform transfer action");
-            return false;
+            return;
         }
         this.toWithdraw(value);
         account.depositInAccount(value);
         System.out.println("Transfer performed successfully");
-        return true;
     }
 
 }

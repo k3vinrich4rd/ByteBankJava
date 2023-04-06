@@ -1,5 +1,6 @@
 package br.com.alura.bytebank.test;
 
+
 import br.com.alura.bytebank.template.Address;
 import br.com.alura.bytebank.template.Client;
 import br.com.alura.bytebank.template.SystemIntern;
@@ -15,11 +16,13 @@ public class TestSystemInternAccount {
 
         //Instanciando uma variável e um objeto Client, acessando e manipulando seus comportamentos
         Client timMaia = new Client("Tim maia", "000.000.000-00", address);
-        timMaia.setLogin("bom senso");
-        timMaia.setPassword(777);
+        timMaia.setLogin("bom s");
+        timMaia.setPassword(11);
 
         //Instanciando uma variável e um objeto SystemInter, acessando e manipulando seus comportamentos
         SystemIntern systemIntern = new SystemIntern();
-        systemIntern.authentication(timMaia, "bom senso", 777);
+        systemIntern.authentication(timMaia, "bom s", 111);
     }
+
+
 }

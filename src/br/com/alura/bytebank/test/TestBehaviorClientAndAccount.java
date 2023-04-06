@@ -1,7 +1,7 @@
 package br.com.alura.bytebank.test;
 
 
-import br.com.alura.bytebank.template.AccountCurrent;
+import br.com.alura.bytebank.template.CurrentAccount;
 import br.com.alura.bytebank.template.Address;
 import br.com.alura.bytebank.template.Client;
 
@@ -16,11 +16,11 @@ public class TestBehaviorClientAndAccount {
 
         Client kevinRichard = new Client("Kevin Richard", "000.000.000-00", address);
 
-        AccountCurrent accountCurrent = new AccountCurrent(kevinRichard, 200, 121, 333);
+        CurrentAccount currentAccount = new CurrentAccount(kevinRichard, 200, 121, 333);
 
-        System.out.println("Holder account: " + accountCurrent.getHolder().getName());
-        System.out.println("Address holder: " + accountCurrent.getHolder().getAddress().getPublicPlace());
-        System.out.println("Balance in Account: " + accountCurrent.getBalance());
+        System.out.println("Holder account: " + currentAccount.getHolder().getName());
+        System.out.println("Address holder: " + currentAccount.getHolder().getAddress().getPublicPlace());
+        System.out.println("Balance in Account: " + currentAccount.getBalance());
 
 
     }

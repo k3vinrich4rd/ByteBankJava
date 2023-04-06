@@ -6,19 +6,22 @@ AccountCurrent é uma classe filha de Account
 Onde estende Account através da aplicação do
 conceito de herança
  */
-public class AccountSavings extends Account {
+public class CurrentAccount extends Account {
 
-    public AccountSavings() {
+    //Construtor da subclasse
+    public CurrentAccount() {
         super(); //construtor baseado na classe mãe (Account)
     }
 
-    public AccountSavings(Client client, double balance, int agency, int number) {
-        super(client, balance, agency, number); //construtor baseado na classe mãe (Account)
-    }
+    public CurrentAccount(Client holder, double balance, int agency, int number) {
+        super(holder, balance, agency, number); //construtor baseado na classe mãe (Account)
 
+    }
+    
     @Override //polimorfismo do método abstrato de Account
     public void depositInAccount(double value) {
         super.balance += value;
         System.out.println("Deposit action performed successfully");
     }
+
 }

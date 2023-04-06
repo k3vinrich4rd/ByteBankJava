@@ -5,3 +5,4 @@ Projeto escrito na linguagem de programação Java, onde também é concebido e 
         Cursos citados:
             * Java OO: entendendo a Orientação a Objetos
             * Java Polimorfismo: entenda herança e interfaces
+            * Java Exceções: aprenda a criar, lançar e controlar exceções
