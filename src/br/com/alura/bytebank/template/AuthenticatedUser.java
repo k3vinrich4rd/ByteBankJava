@@ -18,7 +18,7 @@ public class AuthenticatedUser {
 
     //Método de autenticação
     public boolean firstAuthentication(String login, int password) {
-        if (!this.login.equalsIgnoreCase(login) && this.password != password) {
+        if (!this.login.equalsIgnoreCase(login) || this.password != password) {
             System.out.println("Access denied");
             return false;
         }
