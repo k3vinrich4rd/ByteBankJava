@@ -16,13 +16,10 @@ public class TestSystemInternAccount {
 
         //Instanciando uma variável e um objeto Client, acessando e manipulando seus comportamentos
         Client timMaia = new Client("Tim maia", "000.000.000-00", address);
-        timMaia.setLogin("bom s");
-        timMaia.setPassword(11);
-
+        timMaia.setLoginUser("bom s");
+        timMaia.setPasswordUser(11);
         //Instanciando uma variável e um objeto SystemInter, acessando e manipulando seus comportamentos
         SystemIntern systemIntern = new SystemIntern();
         systemIntern.authentication(timMaia, "bom s", 111);
     }
-
-
 }
