@@ -19,6 +19,12 @@ public class SavingsAccount extends Account {
         super(client, balance, agency, number); //construtor baseado na classe mãe (Account)
     }
 
+    /**Construtor da subclasse
+     utilizando o construtor da super classe*/
+    public SavingsAccount(int agency, int number) {
+        super(agency, number);
+    }
+
     /**polimorfismo do método abstrato de Account
      * @param value*/
     @Override
