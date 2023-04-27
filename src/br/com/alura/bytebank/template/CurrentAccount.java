@@ -23,7 +23,13 @@ public class CurrentAccount extends Account {
         super(agency, number);
     }
 
+    public CurrentAccount(Client holder, double balance) {
+        super(holder, balance);
+    }
 
+    public CurrentAccount(Client holder) {
+        super(holder);
+    }
 
     /**polimorfismo do método abstrato de Account
      * @param value*/
@@ -32,5 +38,61 @@ public class CurrentAccount extends Account {
         super.balance += value;
         System.out.println("Deposit action performed successfully");
     }
+
+    /**
+     * Sobrescrita do toString
+     * @return String
+     */
+    @Override
+    public String toString() {
+        return "Type account: Current Account " + "\n" +
+                super.toString();
+    }
+
+    /**
+     * Sobrescrita do toString
+     * @param agency
+     * @param number
+     * @return String
+     */
+    @Override
+    public String toString(int agency, int number) {
+        return "Type account: Current Account " + "\n"
+                + super.toString(agency, number);
+    }
+
+    /**
+     * Sobrescrita do toString
+     * @param holder
+     * @param balance
+     * @return String
+     */
+    @Override
+    public String toString(Client holder, double balance) {
+        return "Type account: Current Account " + "\n" +
+                super.toString(holder, balance);
+    }
+
+    /**
+     * Sobrescrita do toString
+     * @param holder
+     * @return String
+     */
+    @Override
+    public String toString(Client holder) {
+        return "Type account: Current Account " + "\n"
+                + super.toString(holder);
+    }
+
+    /**
+     *
+     * @param account the object to be compared.
+     * @return Double
+     */
+    @Override
+    public int compareTo(Account account) {
+        return Double.compare(this.balance, account.balance);
+    }
+
 
 }

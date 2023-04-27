@@ -125,4 +125,16 @@ public class Address {
     public void setComplement(String complement) {
         this.complement = complement;
     }
+
+    @Override
+    public String toString() {
+        return
+                "PublicPlace: " + publicPlace + "\n" +
+                        "Number: " + number + "\n" +
+                        "Neighborhood: " + neighborhood + "\n" +
+                        "City: " + city + "\n" +
+                        "State: " + state + "\n" +
+                        "Cep: " + cep + "\n" +
+                        "Complement: " + complement;
+    }
 }
