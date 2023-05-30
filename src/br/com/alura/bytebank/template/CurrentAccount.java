@@ -31,12 +31,17 @@ public class CurrentAccount extends Account {
         super(holder);
     }
 
-    /**polimorfismo do método abstrato de Account
-     * @param value*/
+    /**
+     * polimorfismo do método abstrato de Account
+     *
+     * @param value
+     * @return
+     */
     @Override //polimorfismo do método abstrato de Account
-    public void depositInAccount(double value) {
+    public double depositInAccount(double value) {
         super.balance += value;
         System.out.println("Deposit action performed successfully");
+        return value;
     }
 
     /**

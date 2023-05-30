@@ -1,4 +1,4 @@
-package br.com.alura.bytebank.test;
+package br.com.alura.bytebank.test.testesautomatizadosmain;
 
 import br.com.alura.bytebank.exception.InsufficientBalanceException;
 import br.com.alura.bytebank.template.Address;

@@ -167,6 +167,7 @@ public abstract class Account implements Comparable<Account> {
 
     /**
      * Sobrescrita de toString
+     *
      * @return String
      */
     @Override
@@ -211,8 +212,9 @@ public abstract class Account implements Comparable<Account> {
      * como esse método é abstrato por default ele é publico
      *
      * @param value
+     * @return
      */
-    abstract void depositInAccount(double value);
+    abstract double depositInAccount(double value);
 
     /**
      * método publico que retorna vazio (void)
@@ -223,13 +225,17 @@ public abstract class Account implements Comparable<Account> {
      * @param value
      * @throws InsufficientBalanceException
      */
-    public void toWithdraw(double value) throws InsufficientBalanceException {
-        if (this.balance <= 0 || this.balance < value) {
+    public double toWithdraw(double value) throws InsufficientBalanceException {
+        if (this.balance < value) {
             System.out.println("Balance in account: " + this.balance + " value to withdraw: " + value);
-            throw new InsufficientBalanceException();
-
+             throw new InsufficientBalanceException();
         }
-        System.out.println("Withdrawal action performed successfully");
+        else {
+            this.balance -= value;
+            System.out.println("Withdrawal action performed successfully");
+            return value;
+        }
+
     }
 
     /**
@@ -240,15 +246,17 @@ public abstract class Account implements Comparable<Account> {
      *
      * @param value
      * @param account
+     * @return
      * @throws InsufficientBalanceException
      */
-    public void transfer(double value, Account account) throws InsufficientBalanceException {
+    public double transfer(double value, Account account) throws InsufficientBalanceException {
         if (this.balance <= 0 || this.balance < value) {
             System.out.println("Impossible to perform transfer action");
-            return;
+            return value;
         }
         this.toWithdraw(value);
         account.depositInAccount(value);
         System.out.println("Transfer performed successfully");
+        return value;
     }
 }

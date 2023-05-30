@@ -54,11 +54,13 @@ public class SavingsAccount extends Account {
      * polimorfismo do método abstrato de Account
      *
      * @param value
+     * @return
      */
     @Override
-    public void depositInAccount(double value) {
+    public double depositInAccount(double value) {
         super.balance += value;
         System.out.println("Deposit action performed successfully");
+        return value;
     }
 
     /**
