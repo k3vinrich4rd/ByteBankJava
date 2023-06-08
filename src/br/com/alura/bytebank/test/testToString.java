@@ -1,4 +1,4 @@
-package br.com.alura.bytebank.test.testesautomatizadosmain;
+package br.com.alura.bytebank.test;
 
 import br.com.alura.bytebank.template.CurrentAccount;
 import br.com.alura.bytebank.template.SavingsAccount;
